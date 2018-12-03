@@ -5,7 +5,9 @@ module.exports = function (controller) {
 
     controller.on('bot_space_join', function (bot, event) {
 
-        var welcome = `Hi <@personId:${event.actorId}>, delighted to make your acquaintence!`;
+        var welcome = `Hi <@personId:${event.actorId}>, delighted to make your acquaintence! As part of the adoption campaign for Webex Teams, I am here to support you. I provide information on key topics like "
+        + "notifications and creating spaces; I can search Cisco databases and the at your service portal, and escalate our conversation to humans if " +
+        "I am unable to help. I will also broadcast important announcements for the #Teamup adoption campaign.`;
 
         if (this.identity) {
             welcome += `<br/>I am the **${this.identity.displayName}** bot`;

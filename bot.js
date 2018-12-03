@@ -1,6 +1,6 @@
 //
 // Copyright (c) 2017 Cisco Systems
-// Licensed under the MIT License 
+// Licensed under the MIT License
 //
 
 //
@@ -13,7 +13,7 @@ require('node-env-file')(__dirname + '/.env');
 
 // Fetch token from environement
 // [COMPAT] supports SPARK_TOKEN for backward compatibility
-var accessToken = process.env.ACCESS_TOKEN || process.env.SPARK_TOKEN 
+var accessToken = process.env.ACCESS_TOKEN || process.env.SPARK_TOKEN
 if (!accessToken) {
     console.log("Could not start as this bot requires a Webex Teams API access token.");
     console.log("Please invoke with an ACCESS_TOKEN environment variable");
