@@ -4,8 +4,10 @@
 module.exports = function (controller) {
 
     controller.hears([".*"], 'direct_message,direct_mention', function (bot, message) {
-        var mardown = "I apologize; I am not familiar with that phrase. Please refer to this list of search terms - https://cisco.box.com/shared/static/7puqq5bsleeiaclgdyuyjg93fmlflzdw.docx. If your topic is not present, type 'Cisco' and we can search the at your service portal and other Cisco databases. Finally, type 'escalate' and we will find some in-person support."
-        bot.reply(message, mardown);
+        var text = "I apologize; I am not familiar with that phrase. Enter the term '<strong>Keywords</strong>' to see my full vocabulary.\
+        \n\nIf your query is not covered, we can search the Cisco domain for more information. Type, 'Search Cisco' or 'Search More'.\
+        \n\nIf we are still unable to find an answer, enter 'escalate', and I will find live support.";
+        bot.reply(message, text);
     });
 
 }
